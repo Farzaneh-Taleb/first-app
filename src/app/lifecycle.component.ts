@@ -8,7 +8,7 @@ import {
   AfterViewInit,
   AfterViewChecked,
   OnDestroy,
-  Input
+  Input, ViewChild, ContentChild
 } from '@angular/core';
 
 @Component({
@@ -18,13 +18,20 @@ import {
    <ng-content></ng-content>
     </p>
     <hr>
-    <p>{{bindable}}</p>
+    <p #boundParagraph>{{bindable}}</p>
+  <p>{{boundParagraph.textContent}}</p>
   `,
   styles: []
 })
 export class LifecycleComponent implements OnInit , OnChanges , DoCheck , AfterContentInit ,
   AfterContentChecked , AfterViewInit ,  AfterViewChecked , OnDestroy {
  @Input() bindable = 1000 ;
+
+ @ViewChild('boundParagraph')
+ boundParagraph: HTMLElement  ;
+
+ @ContentChild('boundContent')
+ boundContent: HTMLElement ;
 
   ngOnInit(): void {
   }
@@ -40,17 +47,18 @@ export class LifecycleComponent implements OnInit , OnChanges , DoCheck , AfterC
 
   ngAfterContentInit(): void {
     this.log('AfterContentInit') ;
-
+console.log(this.boundContent) ;
   }
 
   ngAfterContentChecked(): void {
     this.log('AfterContentChecked') ;
+    console.log(this.boundParagraph) ;
 
   }
 
-  ngAfterViewInit(): void {
+  ngAfterViewInit() {
     this.log('AfterViewInit') ;
-
+    console.log(this.boundParagraph) ;
   }
 
   ngAfterViewChecked(): void {
