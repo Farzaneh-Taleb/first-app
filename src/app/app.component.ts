@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
     <!--<div id="fa-other"></div>-->
   <app-directives></app-directives>
   
-    <div appHighlight [defaultColor]="'red'" [highlightColor]="'blue'" >Some Text</div>
+    
     
   `
 
