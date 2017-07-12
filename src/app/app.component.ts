@@ -12,6 +12,7 @@ import { Component } from '@angular/core';
   <button (click)="boundValue = 2000">Click to change Binding</button>
     <!--<div id="fa-other"></div>-->
   <app-directives></app-directives>
+    
   
     
     
