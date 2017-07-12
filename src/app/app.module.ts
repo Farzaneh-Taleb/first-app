@@ -13,6 +13,7 @@ import { TwoWayBindningComponent } from './databinding/two-way-bindning.componen
 import { LifecycleComponent } from './lifecycle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { HighlightDirective } from './highlight.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HighlightDirective } from './highlight.directive';
     TwoWayBindningComponent,
     LifecycleComponent,
     DirectivesComponent,
-    HighlightDirective
+    HighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

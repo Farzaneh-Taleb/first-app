@@ -9,6 +9,14 @@
 <h1>Structural Directives</h1>
 <h2>*ngIf</h2>
 <div *ngIf="switch">Conditional Text</div>
+
+<!--Angular breaks above code to this code-->
+<template [ngIf]="switch " ]>
+  <div>
+    Conditional Text
+  </div>
+</template>
+
 <button (click)="onSwitch()">Switch</button>
 <hr/>
 <h2>ngFor</h2>
@@ -25,3 +33,15 @@
   <p *ngSwitchDefault>default</p>
 
 </div>
+<!--Angular breaks above code to this code-->
+
+<p [ngSwitch]="value">
+  <template [ngSwitchCase]="10">10</template>
+  <template [ngSwitchCase]="100">100</template>
+  <template ngSwitchDefault>default</template>
+
+</p>
+
+
+<h2>Unless Directive</h2>
+<div *appUnless="switch">Conditional Text Custom Structural Directive</div>
