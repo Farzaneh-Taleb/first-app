@@ -46,6 +46,6 @@ this.items  = this.dataService.getData() ;
     }
 
     onSend(value: string) {
-
+this.dataService.pushData(value) ;
     }
 }
