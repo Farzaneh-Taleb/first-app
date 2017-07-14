@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DataService} from "./services/data.service";
 @Component({
   selector: 'app-root',
   template: `
@@ -44,11 +45,9 @@ import { Component } from '@angular/core';
     <hr>
     <si-cmp-a></si-cmp-a>
     <si-cmp-b></si-cmp-b>
-    
-  
-    
-    
-  `
+  `,
+  providers: [DataService]
+
 
 })
 export class AppComponent {
