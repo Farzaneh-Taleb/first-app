@@ -16,6 +16,7 @@ import { HighlightDirective } from './highlight.directive';
 import { UnlessDirective } from './directives/unless.directive';
 import { CmpAComponent } from './services/cmp-a.component';
 import { CmpBComponent } from './services/cmp-b.component';
+import {LogService} from "./services/log.service";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { CmpBComponent } from './services/cmp-b.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
