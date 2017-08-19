@@ -17,6 +17,8 @@ import { UnlessDirective } from './directives/unless.directive';
 import { CmpAComponent } from './services/cmp-a.component';
 import { CmpBComponent } from './services/cmp-b.component';
 import {LogService} from "./services/log.service";
+import { DoublePipe } from './customPipe/double.pipe';
+import { PipesComponent } from './customPipe/pipes.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import {LogService} from "./services/log.service";
     HighlightDirective,
     UnlessDirective,
     CmpAComponent,
-    CmpBComponent
+    CmpBComponent,
+    DoublePipe,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
