@@ -1,0 +1,12 @@
+<div class="pipes">
+  <h1>Pipes</h1>
+  <h2>Built-in pipes</h2>
+  <p>{{myValue | uppercase}}</p>
+  <p>{{myValue | uppercase}}</p>
+  <p>{{myDate | date:"MM/dd/yy"}}</p>
+  <p>{{myValue | slice:3:7 | uppercase }}</p>
+  <hr>
+  <h2>Custom Pipe</h2>
+  <input type="text" #input (keyup)="0">
+  <p>{{input.value | double}}</p>
+</div>
