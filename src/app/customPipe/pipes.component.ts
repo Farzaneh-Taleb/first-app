@@ -11,7 +11,10 @@ export class PipesComponent  {
 
   myValue = 'lowercase';
   myDate = new Date(2016, 5, 24);
-  values = [ 'milk' , 'bread' , 'Beans']
+  values = [ 'milk' , 'bread' , 'Beans'];
+  asyncValue = new Promise((resolve ,  reject) => {
+    setTimeout(() => resolve('Data is here!') , 2000) ;
+  })
   constructor() { }
 
 }
