@@ -20,6 +20,8 @@ import {LogService} from './services/log.service';
 import { DoublePipe } from './customPipe/double.pipe';
 import { PipesComponent } from './customPipe/pipes.component';
 import { FilterPipe } from './customPipe/filter.pipe';
+import { HttpComponent } from './http/http.component';
+import {HttpService} from "./http/http.service";
 
 @NgModule({
   declarations: [
@@ -38,14 +40,15 @@ import { FilterPipe } from './customPipe/filter.pipe';
     CmpBComponent,
     DoublePipe,
     PipesComponent,
-    FilterPipe
+    FilterPipe,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [LogService],
+  providers: [LogService,HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

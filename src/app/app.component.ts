@@ -47,6 +47,16 @@ import {DataService} from "./services/data.service";
     <si-cmp-b></si-cmp-b>
   <h1>Custom Pipe</h1>
     <app-pipes></app-pipes>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <h1>HTTP</h1>
+    <app-http></app-http>
+    
   `,
   providers: [DataService]
 
