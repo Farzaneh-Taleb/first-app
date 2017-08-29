@@ -48,7 +48,7 @@ import {HttpService} from "./http/http.service";
     FormsModule,
     HttpModule
   ],
-  providers: [LogService,HttpService],
+  providers: [LogService , HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
